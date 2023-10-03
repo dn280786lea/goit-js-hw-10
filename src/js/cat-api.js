@@ -11,7 +11,9 @@ function fetchBreeds() {
         throw new Error(response.status);
       }
       return response.json();
+      
     });
+  
 }
 
 function fetchCatByBreed(breedId) {

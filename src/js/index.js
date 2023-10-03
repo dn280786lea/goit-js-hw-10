@@ -1,4 +1,4 @@
-import { fetchBreeds, fetchCatByBreed }from "./cat-api.js";
+/*import { fetchBreeds }from ".//cat-api";
 
 // Отримання посилань на HTML-елементи
 const breedSelect = document.querySelector('.breed-select');
@@ -22,4 +22,4 @@ fetchBreeds()
   })
   .catch(error => {
     console.error('Error fetching breeds:', error);
-  });
+  });*/
