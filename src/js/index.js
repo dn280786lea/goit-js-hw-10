@@ -18,16 +18,11 @@ fetchBreeds()
         arrBreedsId.push({text: element.name, value: element.id});
     });
     new SlimSelect({
-        select: '#breedSelect',
-  onChange: (newVal) => {
-        console.log('test', newVal);
-            
-        }
-        
+        select: breedSelect,
+        data: arrBreedsId
     });
 })
- 
-
+breedSelect.addEventListener('change', onSelectBreed);
 function onSelectBreed(event) {
     loader.classList.replace('is-hidden', 'loader');
     breedSelect.classList.add('is-hidden');
