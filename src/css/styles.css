@@ -21,8 +21,7 @@ img {
 }
 
 .container {
-    display: flex;
-    align-items: center;
+ 
     padding: 15px;
     max-width: 428px;
     margin-right: 20px;
