@@ -1,3 +1,4 @@
+
 body {
     background-color: antiquewhite;
     background-repeat: no-repeat;
@@ -29,4 +30,24 @@ img {
 .ss-values{
     display: block;
     width: 40px;
+}
+.cat {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    margin-top: 100px;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px dotted #2596be;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+}
+
+.unvisible {
+    display: none;
 }
