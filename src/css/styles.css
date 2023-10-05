@@ -13,3 +13,36 @@ body {
     display: block;
 }
 
+.ss-content breed-select{
+    width: 50px;
+}
+img {
+    display: block;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    max-width: 428px;
+    margin-right: 20px;
+}
+.ss-values{
+    display: block;
+    width: 40px;
+}
+.is-hidden{
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+overflow: hidden;
+        }
+
+.box-img {
+display: flex;
+align-items: center;
+  }

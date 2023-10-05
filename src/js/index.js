@@ -2,6 +2,7 @@ import { fetchBreeds, fetchCatByBreed } from "./cat-api";
 import Notiflix from 'notiflix';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
+
  const ref ={
 breedSelect: document.querySelector('.breed-select'),
 catImage: document.querySelector('.cat-inform'),
@@ -21,6 +22,12 @@ fetchBreeds()
         select: breedSelect,
         data: arrBreedsId
     });
+    new SlimSelect({
+  select: '#placeholder',
+  settings: {
+    placeholderText: 'Custom Placeholder Text',
+  }
+})
 })
 breedSelect.addEventListener('change', onSelectBreed);
 function onSelectBreed(event) {
