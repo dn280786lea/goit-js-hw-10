@@ -40,14 +40,23 @@ img {
 .loader {
     width: 48px;
     height: 48px;
-    border: 5px dotted #2596be;
+    border: 5px solid #FFF;
+    border-bottom-color: #f98b6a;
     border-radius: 50%;
     display: inline-block;
-    position: relative;
     box-sizing: border-box;
-    animation: rotation 2s linear infinite;
+    animation: rotation 1s linear infinite;
 }
 
-.is-hidden{
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.is-hidden {
     display: none;
 }
