@@ -20,30 +20,32 @@ fetchBreeds()
     });
     new SlimSelect({
         select: breedSelect,
-        data: arrBreedsId
-    });
-    new SlimSelect({
-  select: '#placeholder',
-  settings: {
-    placeholderText: 'Custom Placeholder Text',
-  }
-})
+        data: arrBreedsId,
+        events: {
+            afterChange: (value) => {
+                console.log(value)
+
+            }
+        }
+         });
 })
 
- breedSelect.addEventListener('change', onSelectBreed);
 function onSelectBreed(event) {
-    loader.classList.replace('is-hidden', 'loader');
     breedSelect.classList.add('is-hidden');
     catImage.classList.add('is-hidden');
+  
 
     const selectedBreedId = event.currentTarget.value;
     fetchCatByBreed(selectedBreedId)
     .then(data => {
-        breedSelect.classList.replace('loader', 'is-hidden');
+        loader.classList.replace('is-hidden', 'loader');
         breedSelect.classList.remove('is-hidden'); 
         const { url, breeds } = data[0];
         
-        catImage.innerHTML = `<div class="box-img"><img src="${url}" alt="${breeds[0].name}" width="400"/></div><div class="box"><h1>${breeds[0].name}</h1><p>${breeds[0].description}</p><p><b>Temperament:</b> ${breeds[0].temperament}</p></div>`
+        catImage.innerHTML = `<div class="box-img"><img src="${url}" alt="${breeds[0].name}" width="400"/>
+        </div><div class="box"><h1>${breeds[0].name}</h1>
+        <p>${breeds[0].description}</p>
+        <p><b>Temperament:</b> ${breeds[0].temperament}</p></div>`
         catImage.classList.remove('is-hidden');
     })
     .catch(onFetchError);
