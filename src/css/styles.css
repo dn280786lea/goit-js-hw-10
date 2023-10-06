@@ -48,3 +48,6 @@ img {
     animation: rotation 2s linear infinite;
 }
 
+.is-hidden{
+    display: none;
+}
